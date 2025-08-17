@@ -135,3 +135,53 @@ All seeds include a version prefix for future-proofing:
 - ATA owner checks could be stricter.  
 
 ---
+
+## 📈 Future Enhancements (Roadmap)
+
+### 🔒 Safety & Auth
+- Ed25519 oracle sig verification (no trusted signers).  
+- Per-instruction version guard + allowlist.  
+- CPI guardrails (SPL Token / Token-2022 / ed25519 only).  
+
+### 💰 Funds & Treasuries
+- Dedicated PDA treasuries with governance-controlled withdrawals.  
+- Multi-treasury splits (protocol / insurance / referrer).  
+
+### 📊 Price & Risk
+- Exact TWAP ring buffer.  
+- Expiry median fix.  
+- Circuit breaker on extreme moves.  
+
+### 📜 Lifecycle & Margin
+- Maker–taker margin tracking.  
+- Liquidation hook + bounty for bots.  
+
+### ⚖️ Rounding & Units
+- Per-asset decimals.  
+- Deterministic rounding policy.  
+
+### ⚙️ Compute & Rent
+- ComputeBudget hints.  
+- State size optimizations.  
+- Optional zero-copy Market struct.  
+
+### 🏛 Governance & Ops
+- Timelocked parameter updates.  
+- Granular pause flags.  
+
+### 🧑‍💻 Access & UX
+- Strict ATA checks.  
+- Rich events with reason codes.  
+
+### 🧪 Testing
+- Golden-path integration tests.  
+- Fuzz Merkle proofs.  
+- Deterministic TWAP rollover tests.  
+
+### 🔧 DevEx & Product
+- Cargo feature flags.  
+- IDL docs & TS examples.  
+- Cross-collateral margin, batch settlement, insurance fund.  
+- On-chain dispute DAO, Chainlink oracle integration.  
+- NFT coffee certificates.  
+- UI dApp for non-technical users.  
