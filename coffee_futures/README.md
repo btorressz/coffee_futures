@@ -51,3 +51,66 @@ All seeds include a version prefix for future-proofing:
 - **CFT (Coffee Futures Token)** mint (decimals `3` in PoC) — minted to represent delivered kg in physical settlement.  
 
 ---
+
+## 🧭 Instructions 
+
+1. **`init_cft_mint(decimals)`**  
+   - Creates the CFT mint & PDA authority.  
+   - Rent-exempt checks ✅  
+   - Emits `CftMintInitialized`.
+
+2. **`create_market(...)`**  
+   - Opens a market (per harvest/spec).  
+   - Sets params: margin/fee bps, caps, oracle age, TWAP window, dust, etc.  
+   - Emits `MarketCreated`.
+
+3. **`publish_price(price_per_kg, nonce)`**  
+   - Oracle publishes a price.  
+   - Replay & staleness guards ✅  
+   - Price-band guard (±25%) ✅  
+   - TWAP accumulator update ✅  
+   - Emits `PricePublished`.
+
+4. **`open_deal(...)`**  
+   - Creates a bilateral futures deal.  
+   - Deposits initial margin from both parties.  
+   - Supports baskets, Merkle proofs, vault creation ✅  
+   - Emits `DealOpened`.
+
+5. **`top_up_margin(amount)`**  
+   - Farmer/buyer adds margin.  
+   - Emits `MarginToppedUp`.
+
+6. **`margin_call(grace_sec)`**  
+   - Authority sets/updates margin call.  
+   - Emits `MarginCalled`.
+
+7. **`mark_to_market()`**  
+   - Checks margin vs maintenance.  
+   - Flags margin call or liquidation ✅  
+   - Emits `MarginCalled / LiquidationFlagged`.
+
+8. **`settle_cash()`**  
+   - Settles deal in cash at expiry.  
+   - P&L transfer, fees, dust guard ✅  
+   - Emits `SettledCash`.
+
+9. **`verify_and_settle_physical(delivered_kg, proof_hashes[], leaf?)`**  
+   - Verifies delivery with optional Merkle proof.  
+   - Handles partial & full settlement ✅  
+   - Emits `SettledPhysical`.
+
+10. **`cancel_deal()`**  
+    - Cancelable if margin not deposited or before deadline.  
+    - Emits `DealCanceled`.
+
+11. **Role Rotation (Oracle)**  
+    - `propose_rotate_oracle(new_oracle, effective_after_ts)`  
+    - `activate_rotate_oracle()` (after timelock).  
+    - Emits `RoleRotationProposed / RoleRotationActivated`.
+
+12. **`close_deal()`**  
+    - Closes a settled deal (rent reclaimed).  
+
+---
+
