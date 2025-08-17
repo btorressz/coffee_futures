@@ -68,5 +68,11 @@ By leveraging blockchain, this protocol creates a **trustless marketplace** for 
 
 ---
 
+## ⚠️ Disclaimer
+This project is a **proof of concept** built for research and prototyping purposes only.  
+It is **not production-ready** and should not be used to trade real assets until formally audited.  
+
+---
+
 
 ---
