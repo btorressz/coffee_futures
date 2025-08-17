@@ -55,5 +55,18 @@ By leveraging blockchain, this protocol creates a **trustless marketplace** for 
 
 ---
 
+# 📈 Future Enhancements
+
+🔮 Ideas for expanding beyond this prototype:  
+- ✅ **Cross-collateral support** (farmers pledge multiple assets for margin)  
+- ✅ **Batch settlement** for large-scale delivery contracts  
+- ✅ **Insurance fund** for extreme price events  
+- ✅ **On-chain dispute resolution DAO**  
+- ✅ **Integration with global commodity oracles** (e.g. ptyh, switchboard, chainlink)  
+- ✅ **NFT-based coffee certificates** (traceability of beans & origin)  
+- ✅ **UI/Frontend dApp** for farmers and buyers to interact without coding  
+
+---
+
 
 ---
