@@ -33,3 +33,21 @@ PDA that controls the **CFT mint** for physical settlement.
 PDA authority over the **margin vaults** (ATAs in quote mint) for a given deal.  
 
 ---
+
+## 🔑 PDAs & Seeds (Versioned)
+
+All seeds include a version prefix for future-proofing:
+
+- `cft_mint_auth = [b"v1", "cft_auth", cft_mint]`  
+- `market = [b"v1", "market", authority, cft_mint, quote_mint]`  
+- `deal = [b"v1", "deal", market, farmer, buyer]`  
+- `vault_auth = [b"v1", "vault_auth", deal]`  
+
+---
+
+## 💰 Tokens
+
+- **Quote mint** (USDC-like) for margin & settlements.  
+- **CFT (Coffee Futures Token)** mint (decimals `3` in PoC) — minted to represent delivered kg in physical settlement.  
+
+---
