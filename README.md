@@ -42,6 +42,18 @@ By leveraging blockchain, this protocol creates a **trustless marketplace** for 
 - **PDA-based vaults** for escrowed funds  
 - Reentrancy protection in all critical flows  
 - Merkle proof verification for **physical deliveries**  
-- Role rotation with **timelocks** for governance  
+- Role rotation with **timelocks** for governance
+
+  ---
+
+  ## 🏗️ Contract Architecture
+
+- **Market** → Defines a harvest period & settlement rules  
+- **Deal** → Represents an individual bilateral contract  
+- **CFT (Coffee Futures Token)** → Tokenized coffee for physical settlement  
+- **Oracle** → Secure market data feed (TWAP + freshness checks)  
+
+---
+
 
 ---
