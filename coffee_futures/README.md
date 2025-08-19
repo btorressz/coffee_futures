@@ -189,6 +189,8 @@ All seeds include a version prefix for future-proofing:
 ___
 
 
+
+
                          ☕ COFFEE FUTURES PROTOCOL (Anchor / Solana)
 
 ACTORS
