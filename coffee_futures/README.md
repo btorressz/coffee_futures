@@ -184,4 +184,6 @@ All seeds include a version prefix for future-proofing:
 - Cross-collateral margin, batch settlement, insurance fund.  
 - On-chain dispute DAO, Chainlink oracle integration.  
 - NFT coffee certificates.  
-- UI dApp for non-technical users.  
+- UI dApp for non-technical users.
+
+___
