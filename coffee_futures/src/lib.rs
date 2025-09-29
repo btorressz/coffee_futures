@@ -3,7 +3,7 @@ use anchor_spl::associated_token::AssociatedToken;
 use anchor_spl::token::{self, Mint, MintTo, Token, TokenAccount, Transfer};
 use solana_program::rent::Rent;
 
-declare_id!("programidhere");
+declare_id!("AGJPgLjrChocPMmhzH8oiumrChZEaJKHDZcb83r5C1f9");
 
 // ------------------------- Config constants -------------------------
 pub const PROGRAM_VERSION: u8 = 1;
