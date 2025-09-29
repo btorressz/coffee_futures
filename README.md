@@ -7,6 +7,8 @@ This proof-of-concept was built in **Solana Playground** and currently serves as
 
 The protocol enables coffee farmers and buyers to create bilateral futures contracts with both **physical** and **cash settlement** options — providing transparency, price risk management, and on-chain settlement for the global coffee trade.
 
+**devnet**: (https://explorer.solana.com/address/AGJPgLjrChocPMmhzH8oiumrChZEaJKHDZcb83r5C1f9?cluster=devnet)
+
 ---
 
 ## 🌍 Overview
